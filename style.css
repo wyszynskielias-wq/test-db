@@ -1,0 +1,109 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0a0f1e;
+  --surface: #141c35;
+  --hover:   #1a2440;
+  --text:    #e8eaf2;
+  --muted:   #7b82a0;
+  --accent:  #4f8ef7;
+  --border:  #1e2a4a;
+  --border2: #2a3a5c;
+  --r:       10px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container { max-width: 600px; width: 100%; }
+
+/* Zurück-Link */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-family: 'Space Mono', monospace;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+}
+.back:hover { color: var(--accent); }
+
+/* Überschriften */
+.eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* Karte */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Hinweis-Box mit linkem Streifen */
+.note {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 1rem 1.25rem;
+  font-size: 0.88rem;
+  color: #a0a8c0;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+.btns { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--r);
+  font-size: 0.85rem;
+  font-family: 'Space Mono', monospace;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border2); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 480px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}

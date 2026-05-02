@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hintergrund – Elias Wyszynski</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .timeline { position: relative; padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+  /* vertikale Linie */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 6px; bottom: 6px;
+    width: 1px;
+    background: var(--border2);
+  }
+
+  .tl-item { position: relative; margin-bottom: 2rem; }
+
+  /* Punkt auf der Linie */
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem; top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+
+  .tl-year { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--accent); margin-bottom: 4px; }
+  .tl-title { font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
+  .tl-text { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="showcase.html" class="back">← zurück</a>
+  <p class="eyebrow">// 01 — Über mich</p>
+  <h1>Mein Weg zur<br>Programmierung</h1>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <p class="tl-year">6. KLASSE</p>
+      <p class="tl-title">Erste Schritte mit Scratch</p>
+      <p class="tl-text">In einer Schul-AG lernte ich die Grundlagen der Programmierung kennen. Eigene Projekte selbst umzusetzen hat mich sofort fasziniert – ich wollte mehr.</p>
+    </div>
+    <div class="tl-item">
+      <p class="tl-year">9. KLASSE</p>
+      <p class="tl-title">Webentwicklung als Wahlpflichtfach</p>
+      <p class="tl-text">Ich wählte ein Fach zur Website-Entwicklung und war dem Kurs schnell voraus. Am Ende half ich meinen Mitschülern bei ihren Projekten. Ab diesem Punkt wusste ich: das soll mein Beruf werden.</p>
+    </div>
+    <div class="tl-item">
+      <p class="tl-year">2025</p>
+      <p class="tl-title">Praktikum bei Volkswagen</p>
+      <p class="tl-text">Erste Einblicke in den professionellen IT-Betrieb. Ich konnte Eigenverantwortung übernehmen und lernte den Umgang mit professioneller Firmensoftware.</p>
+    </div>
+    <div class="tl-item">
+      <p class="tl-year">HEUTE</p>
+      <p class="tl-title">Scharbeutz · Ausbildungsvorbereitung</p>
+      <p class="tl-text">Ich lebe in Scharbeutz und besuche die Ausbildungsvorbereitung an der Beruflichen Schule Eutin. Parallel entwickle ich eigene Projekte und bewerbe mich auf Ausbildungsplätze ab August 2026.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    Diese Website habe ich vollständig selbst entwickelt – Layout, Design und Code. Ich nutze dabei gezielt KI-Unterstützung, verstehe aber jeden Code, den ich einsetze.
+  </div>
+
+  <div class="btns">
+    <a href="aktuelles.html" class="btn btn-primary">Projekte & Skills →</a>
+    <a href="showcase.html" class="btn btn-ghost">zur Übersicht</a>
+  </div>
+</div>
+</body>
+</html>
